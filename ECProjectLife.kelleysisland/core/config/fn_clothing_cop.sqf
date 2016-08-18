@@ -17,36 +17,14 @@ _ret = [];
 switch (_filter) do
 {
 	//Uniforms
-	case 0:
+	case 0: 
 	{
-		if(__GETC__(life_coplevel) > 1) then
-		{
-			_ret pushBack ["ecpl_cdt_so","Cadet Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 2) then
-		{
-			_ret pushBack ["ecpl_dpt_so","Deputy Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 3) then
-		{
-			_ret pushBack ["ecpl_cpl_so","Corporal Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 4) then
-		{
-			_ret pushBack ["ecpl_cmd_so","Command Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 5) then
-		{
-			_ret pushBack ["ecpl_cmd_so","Command Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 6) then
-		{
-			_ret pushBack ["ecpl_cmd_so","Command Uni",10];
-		};
-		if(__GETC__(life_coplevel) > 7) then
-		{
-			_ret pushBack ["ecpl_cmd_so","Command Uni",10];
-		};
+		_ret =
+		[
+			["ecpl_cdt_so",nil,25],
+			["ecpl_dpt_so",nil,25],
+			["ecpl_cpl_so",nil,25]
+		];
 	};
 	
 	//Hats
