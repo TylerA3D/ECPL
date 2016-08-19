@@ -4,7 +4,7 @@ master_group attachTo[bank_obj,[0,0,0]];
 
 onMapSingleClick "if(_alt) then {vehicle player setPos _pos};";
 
-//Spawn the new hospitals.
+//blah
 {
 	_hs = createVehicle ["Land_Hospital_main_F", [0,0,0], [], 0, "NONE"];
 	_hs setDir (markerDir _x);
