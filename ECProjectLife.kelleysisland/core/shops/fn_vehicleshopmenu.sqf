@@ -1,22 +1,23 @@
 /*
 	File: fn_vehicleShopMenu.sqf
-	Author: Bryan "Tonic" Boardwine
+	
 	
 	Description:
 	Blah
 */
 private["_shop","_sideCheck","_spawnPoints","_shopFlag","_disableBuy"];
-_shop = [(_this select 3),0,"",[""]] call BIS_fnc_param;
-_sideCheck = [(_this select 3),1,sideUnknown,[civilian]] call BIS_fnc_param;
-_spawnPoints = [(_this select 3),2,"",["",[]]] call BIS_fnc_param;
-_shopFlag = [(_this select 3),3,"",[""]] call BIS_fnc_param;
-_disableBuy = [(_this select 3),5,false,[true]] call BIS_fnc_param;
+_shop = (_this select 3) param [0,"",[""]];
+_sideCheck = (_this select 3) param [1,sideUnknown,[civilian]];
+_spawnPoints = (_this select 3) param [2,"",["",[]]];
+_shopFlag = (_this select 3) param [3,"",[""]];
+_disableBuy = (_this select 3) param [5,false,[true]];
 
 disableSerialization;
 //Long boring series of checks
 if(dialog) exitWith {};
 if(_shop == "") exitWith {};
-if(_sideCheck != sideUnknown && {playerSide != _sideCheck}) exitWith {hint localize "STR_Shop_Veh_NotAllowed"};
+
+	if(_sideCheck != sideUnknown && {playerSide != _sideCheck}) exitWith {[localize "STR_Shop_Veh_NotAllowed", false] spawn domsg;};
 
 if(!createDialog "Life_Vehicle_Shop_v2") exitWith {};
 
@@ -41,6 +42,7 @@ ctrlShow [2304,false];
 {
 	_className = _x select 0;
 	_basePrice = _x select 1;
+	_baseprice = _baseprice /10;
 	
 	_vehicleInfo = [_className] call life_fnc_fetchVehInfo;
 	_control lbAdd (_vehicleInfo select 3);
