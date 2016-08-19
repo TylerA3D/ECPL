@@ -7,7 +7,7 @@
 	Master configuration list / array for buyable vehicles & prices and their shop.
 */
 private["_shop","_return"];
-_shop = [_this,0,"",[""]] call BIS_fnc_param;
+_shop = param [0,"",[""]];
 if(_shop == "") exitWith {[]};
 _return = [];
 switch (_shop) do
@@ -43,48 +43,11 @@ switch (_shop) do
 		_return = 
 		[
 			["B_Quadbike_01_F",100],
-			["REVO_12M5_Black",20000],
-			["REVO_12M5_blue",20000],
-			["REVO_12M5_Green",20000],
-			["REVO_12M5_Orange",20000],
-			["REVO_12M5_Pink",20000],
-			["REVO_12M5_Purple",20000],
-			["REVO_12M5_Red",20000],
-			["REVO_12M5_White",20000],
-			["REVO_12M5_Yellow",20000],
-			["DRPG_12Charger_Black",20000],
-			["DRPG_12Charger_blue",20000],
-			["DRPG_12Charger_Green",20000],
-			["DRPG_12Charger_Orange",20000],
-			["DRPG_12Charger_Pink",20000],
-			["DRPG_12Charger_Purple",20000],
-			["DRPG_12Charger_Red",20000],
-			["DRPG_12Charger_White",20000],
-			["DRPG_12Charger_Yellow",20000],
-			["REVO_14Explorer_Black",20000],
-			["REVO_14Explorer_blue",20000],
-			["REVO_14Explorer_Green",20000],
-			["REVO_14Explorer_Orange",20000],
-			["REVO_14Explorer_Pink",20000],
-			["REVO_14Explorer_Purple",20000],
-			["REVO_14Explorer_Red",20000],
-			["REVO_14Explorer_White",20000],
-			["REVO_14Explorer_Yellow",20000],
 			["AM_2015C_Black",20000],
 			["AM_2015C_blue",20000],
 			["AM_2015C_Green",20000],
 			["AM_2015C_Red",20000],
 			["AM_2015C_White",20000],
-			["REVO_06Victoria_Black",10000],
-			["REVO_06Victoria_blue",10000],
-			["REVO_06Victoria_Green",10000],
-			["REVO_06Victoria_Orange",10000],
-			["REVO_06Victoria_Pink",10000],
-			["REVO_06Victoria_Purple",10000],
-			["REVO_06Victoria_Red",10000],
-			["REVO_06Victoria_White",10000],
-			["REVO_06Victoria_Yellow",10000],
-			["REVO_06Victoria_taxi",10000],
 			["A3L_Cooper_concept_black",10000],
 			["A3L_Cooper_concept_blue",10000],
 			["A3L_Cooper_concept_red",10000],
@@ -152,21 +115,7 @@ switch (_shop) do
 			["A3L_F350Orange",50000],
 			["A3L_F350Red",50000],
 			["A3L_F350White",50000],
-			["A3L_Dumptruck",100000],
-			["REVO_Transit_Black",50000],
-			["REVO_Transit_blue",50000],
-			["REVO_Transit_Doge",50000],
-			["REVO_Transit_DANK",50000],
-			["REVO_Transit_FedEX",50000],
-			["REVO_Transit_Green",50000],
-			["REVO_Transit_Orange",50000],
-			["REVO_Transit_Pink",50000],
-			["REVO_Transit_Purple",50000],
-			["REVO_Transit_Red",50000],
-			["REVO_Transit_Weed",50000],
-			["REVO_Transit_White",50000],
-			["REVO_Transit_Meth",50000],
-			["REVO_Transit_Yellow",50000]
+			["A3L_Dumptruck",100000]
 		];	
 	};
 	
@@ -184,13 +133,7 @@ switch (_shop) do
 	{
 		_return =
 		[
-			["AM_F350_pd",100],
-			["REVO_Transit_DPS",100],
-			["REVO_12M5_police",100],
-			["REVO_Charger_PD",100],
-			["REVO_06Victoria_pd",100],
-			["REVO_14Explorer_police",100],
-			["REVO_Charger_SO2",100]
+			["AM_F350_pd",100]
 		];
 	};
 	
